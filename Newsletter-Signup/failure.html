@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <style>
+    .jumbotron {
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      border-radius: 0.3rem;
+
+      background: #1a2a6c;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #e1e1e1, #b21f1f, #00cb82);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #e1e1e1, #b21f1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .hd1{
+        color: #00263b;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="hd1">Oh No!</h1>
+                <h4 class="hd1"> There was an error with signing up, please try again.</h4>
+        <hr class="my-4">
+
+        <form action="/failure" method="post">
+          <button class="btn btn-info btn-lg" type="submit" name="button">Try Again</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
