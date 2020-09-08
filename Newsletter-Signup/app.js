@@ -34,11 +34,11 @@ app.post("/", function(req, res){
 
   const jsonData = JSON.stringify(data);
 
-  // list id for mail-chimp 896d13e1db
-  const url = "https://us17.api.mailchimp.com/3.0/lists/896d13e1db";
+  // list id for mail-chimp
+  const url = "https://us17.api.mailchimp.com/3.0/lists/ list id here";
   const options = {
     method: "POST",
-    auth: "Shubham0416:aa91d5a6ecab400455edc21626399f51-us17"
+    auth: "api key here"
   }
 
   const request = https.request(url, options, function(response){
@@ -61,7 +61,6 @@ app.post("/failure", function(req, res){
   res.redirect("/");
 });
 
-//api-key aa91d5a6ecab400455edc21626399f51-us17
 
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server has started Successfully.");
