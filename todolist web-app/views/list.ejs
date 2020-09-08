@@ -1,0 +1,37 @@
+<%- include('header'); -%>
+
+<section class="container">
+  <div class="heading">
+    <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
+    <h1 class="heading__title">To-Do List</h1>
+  </div>
+  <h2> <%= listTitle %> </h2>
+  <h3 class="form__label">~ Today I need to ~</h2>
+
+    <div class="toDoList">
+      <% newListItems.forEach(function(newListItem){ %>
+        <form action="/delete" method="post">
+          <div class="item">
+            <input type="checkbox" name="checkbox" value="<%= newListItem._id %>" onChange="this.form.submit()">
+            <p> <%= newListItem.name %> </p>
+          </div>
+          <input type="hidden" name="listName" value="<%= listTitle %>">
+        </form>
+      <% }); %>
+
+    </div>
+
+    <form action="/" class="form" method="post">
+      <input class="form__input" type="text" name="newItem" size="30" autocomplete="off" placeholder="New Task / Event">
+      <!-- Giving submit button a name which contain button value of ListTitle i.e. Work List-->
+      <button type="submit" class="button" name="list" value="<%= listTitle %>"><span> + </span></button>
+    </form>
+
+    <footer>
+      &copy, 2020 Shubham Sood
+    </footer>
+
+
+</section>
+
+<%- include('footer'); -%>
