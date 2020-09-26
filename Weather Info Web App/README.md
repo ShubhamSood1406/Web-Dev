@@ -1,4 +1,4 @@
-Heroku hosted link to this web-app https://salty-dusk-00780.herokuapp.com/
+<b>Heroku hosted link to this web-app</b> https://salty-dusk-00780.herokuapp.com/
 
 <b>Snapshot of the web-app </b>
 
